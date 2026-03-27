@@ -1,0 +1,31 @@
+/* FONDO LOGIN */
+.fondo-login{
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+/* CARD LOGIN */
+.card-login{
+  border-radius:15px;
+}
+
+/* DASHBOARD */
+.fondo-dashboard{
+  background:#f1f5f9;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  height:100vh;
+  background:#0f172a;
+}
+
+.sidebar button{
+  border-radius:8px;
+}
+
+/* TABLAS */
+.table{
+  border-radius:10px;
+  overflow:hidden;
+}
