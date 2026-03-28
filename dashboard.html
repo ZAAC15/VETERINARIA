@@ -9,9 +9,17 @@
 
 </head>
 
-<body>
+<body class="fondo-dashboard">
 
-<div class="d-flex">
+<!-- SPLINE JAKE -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.73/build/spline-viewer.js"></script>
+
+<spline-viewer 
+  class="spline-dashboard"
+  url="https://prod.spline.design/OPlBEvQwSlQASwqG/scene.splinecode">
+</spline-viewer>
+
+<div class="d-flex contenido-dashboard">
 
   <!-- SIDEBAR -->
   <div class="sidebar text-white p-4">
@@ -35,6 +43,39 @@
   <div class="p-4 w-100" id="contenido"></div>
 
 </div>
+
+<!-- ===== TEMPLATES ===== -->
+
+<template id="filaMascota">
+  <tr>
+    <td class="n"></td>
+    <td class="e"></td>
+    <td class="t"></td>
+    <td>
+      <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
+    </td>
+  </tr>
+</template>
+
+<template id="filaProp">
+  <tr>
+    <td class="n"></td>
+    <td class="t"></td>
+    <td>
+      <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
+    </td>
+  </tr>
+</template>
+
+<template id="filaVet">
+  <tr>
+    <td class="n"></td>
+    <td class="e"></td>
+    <td>
+      <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
+    </td>
+  </tr>
+</template>
 
 <script src="js/app.js"></script>
 

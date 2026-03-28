@@ -1,27 +1,27 @@
-// 🔐 Validar sesión
+// VALIDAR SESION
 if(localStorage.getItem('sesion') !== 'activa'){
   window.location.href = 'index.html';
 }
 
-// 📦 Datos
+// DATOS
 let mascotas = JSON.parse(localStorage.getItem('mascotas')) || [];
 let propietarios = JSON.parse(localStorage.getItem('propietarios')) || [];
 let veterinarios = JSON.parse(localStorage.getItem('veterinarios')) || [];
 
-// 💾 Guardar
+// GUARDAR
 function guardar(){
   localStorage.setItem('mascotas', JSON.stringify(mascotas));
   localStorage.setItem('propietarios', JSON.stringify(propietarios));
   localStorage.setItem('veterinarios', JSON.stringify(veterinarios));
 }
 
-// Logout
+// LOGOUT
 function cerrarSesion(){
   localStorage.removeItem('sesion');
   window.location.href = 'index.html';
 }
 
-// Navegación
+// NAVEGACION
 function cargarVista(vista){
   const cont = document.getElementById('contenido');
 
@@ -38,17 +38,6 @@ function cargarVista(vista){
       <table class="table table-hover table-striped mt-3 shadow-sm">
         <tbody id="tablaMascotas"></tbody>
       </table>
-
-      <template id="filaMascota">
-        <tr>
-          <td class="n"></td>
-          <td class="e"></td>
-          <td class="t"></td>
-          <td>
-            <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-          </td>
-        </tr>
-      </template>
     `;
     renderMascotas();
   }
@@ -65,16 +54,6 @@ function cargarVista(vista){
       <table class="table table-hover table-striped mt-3 shadow-sm">
         <tbody id="tablaProp"></tbody>
       </table>
-
-      <template id="filaProp">
-        <tr>
-          <td class="n"></td>
-          <td class="t"></td>
-          <td>
-            <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-          </td>
-        </tr>
-      </template>
     `;
     renderPropietarios();
   }
@@ -91,22 +70,12 @@ function cargarVista(vista){
       <table class="table table-hover table-striped mt-3 shadow-sm">
         <tbody id="tablaVet"></tbody>
       </table>
-
-      <template id="filaVet">
-        <tr>
-          <td class="n"></td>
-          <td class="e"></td>
-          <td>
-            <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-          </td>
-        </tr>
-      </template>
     `;
     renderVeterinarios();
   }
 }
 
-// MASCOTAS
+// ===== MASCOTAS =====
 function agregarMascota(){
   mascotas.push({
     nombre: nombre.value,
@@ -141,7 +110,7 @@ function renderMascotas(){
   });
 }
 
-// PROPIETARIOS
+// ===== PROPIETARIOS =====
 function agregarPropietario(){
   propietarios.push({
     nombre: nombreP.value,
@@ -174,7 +143,7 @@ function renderPropietarios(){
   });
 }
 
-// VETERINARIOS
+// ===== VETERINARIOS =====
 function agregarVeterinario(){
   veterinarios.push({
     nombre: nombreV.value,

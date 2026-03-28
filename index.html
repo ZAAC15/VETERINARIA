@@ -9,22 +9,35 @@
 
 </head>
 
-<body class="fondo-login d-flex justify-content-center align-items-center vh-100">
+<body class="fondo-login">
 
-<div class=" card shadow-lg p-4 border-0" style="width:350px;">
+<!-- SPLINE -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.73/build/spline-viewer.js"></script>
 
-  <div class="text-center mb-3">
-    <img src="logo-vet.png" style="width:80px">
+<spline-viewer 
+  class="spline-login"
+  url="https://prod.spline.design/OPlBEvQwSlQASwqG/scene.splinecode">
+</spline-viewer>
+
+<!-- LOGIN -->
+<div class="contenedor-login">
+
+  <div class="card-login p-4">
+
+    <div class="text-center mb-3">
+      <img src="logo-vet.png" style="width:80px">
+    </div>
+
+    <h4 class="text-center fw-bold">Veterinaria App</h4>
+
+    <input type="text" id="usuario" class="form-control my-2" placeholder="Usuario">
+    <input type="password" id="clave" class="form-control my-2" placeholder="Contraseña">
+
+    <button class="btn btn-primary w-100 mt-2" onclick="iniciarSesion()">Ingresar</button>
+
+    <p id="error" class="text-danger text-center mt-2"></p>
+
   </div>
-
-  <h4 class="text-center fw-bold">Veterinaria App</h4>
-
-  <input type="text" id="usuario" class="form-control my-2" placeholder="Usuario">
-  <input type="password" id="clave" class="form-control my-2" placeholder="Contraseña">
-
-  <button class="btn btn-primary w-100 mt-2" onclick="iniciarSesion()">Ingresar</button>
-
-  <p id="error" class="text-danger text-center mt-2"></p>
 
 </div>
 
